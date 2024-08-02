@@ -50,6 +50,11 @@ class String : public GenericString {
      * @brief Returns a reference to this as "String" instead of "GenericString"
      */
     String &as_string();
+
+    /**
+     * @brief Returns a pointer to
+     */
+    const char *to_string();
 };
 
 #endif
