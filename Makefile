@@ -4,7 +4,7 @@ CLINK=$(CXX)
 
 all: firewall.exe
 
-firewal.exe: main.o libfirewall.so libinput.so
+firewall.exe: main.o libfirewall.so libinput.so
 	$(CLINK) main.o -o firewall.exe -lfirewall -linput -L.
 
 main.o: main.cpp

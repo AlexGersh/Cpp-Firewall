@@ -23,8 +23,8 @@ class String : public GenericString {
     /**
      * @brief Returns true if the contents of this == the contents of other.
      */
-    bool operator==(const char *other);
-    bool operator==(const GenericString &other);
+    bool operator==(const char *other) const;
+    bool operator==(const GenericString &other) const;
 
     /**
      * @brief Splits this to several sub-strings according to delimiters.
@@ -32,13 +32,13 @@ class String : public GenericString {
      * this should be split according to spaces and commas.
      * @returns A String object.
      */
-    String split(const char *delimiters);
+    StringArray split(const char *delimiters) const;
 
     /**
      * @brief Returns an integer representation of the contents of this.
      * If "this" cannot be represented as integer, returns 0.
      */
-    int to_integer();
+    int to_integer() const;
 
     /**
      * @brief Remove any leading or trailing white-spaces from this.
@@ -49,10 +49,10 @@ class String : public GenericString {
     /**
      * @brief Returns a reference to this as "String" instead of "GenericString"
      */
-    String &as_string();
+    String &as_string(const GenericString &other);
 
     /**
-     * @brief Returns a pointer to
+     * @brief Returns a pointer to the string
      */
     const char *to_string();
 };
