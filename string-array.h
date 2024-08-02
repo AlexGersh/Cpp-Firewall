@@ -2,30 +2,28 @@
 #define STRING_ARRAY_H
 
 #include "generic-string.h"
-#include <list>
+#include <iostream>
+#include <vector>
 
 class StringArray {
     private:
-    list<GenericString> list;
+    std::vector<GenericString*> vec;
 
     public:
 
         //C'tor D'tor
         StringArray();
-        StringArray(const &StringArray);
+        StringArray(const StringArray&);
         ~StringArray();
 
         //getter and 
-        int get_size();
+        int size();
         //adding to end
         void Add(GenericString&);
-        
-        //remove specific
-        void Remove(GenericString&);
 
-        GenericString operator[](int);
-        
-}
+        GenericString& operator[](int);
+
+};
 
 
 
