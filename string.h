@@ -63,6 +63,6 @@ class String : public GenericString {
     const char *get_data() const;
 };
 
-GenericString *make_string(const char *str);
+//GenericString *make_string(const char *str);
 
 #endif

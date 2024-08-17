@@ -7,6 +7,9 @@ all: firewall.exe
 firewall.exe: main.o libfirewall.so libinput.so
 	$(CLINK) main.o -o firewall.exe -lfirewall -linput -L.
 
+test.exe : string.o string-array.o
+	$(CLINK) string.o string-array.o -o test.exe
+
 main.o: main.cpp
 	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
 

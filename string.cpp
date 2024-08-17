@@ -4,7 +4,8 @@
 
 char *String::allocate_and_copy(const char *data, int size) {
     char *str = new char[size + 1];
-    strcpy(str, data);
+    memcpy(str, data,size);
+    str[size]=0;
     return str;
     // strcpy returns the poinetr to dst, we may implement by one line:
     // return strcpy(new char[size + 1], data);
@@ -18,6 +19,8 @@ String::String(const char *str = "") {
     // if no str provided, by default its an empty string and length will be 0
     length = strlen(str);
     data = String::allocate_and_copy(str, length);
+
+
 }
 
 String::String(const String &str_obj) {
@@ -36,19 +39,68 @@ String &String::operator=(const char *str) {
 bool String::operator==(const char *other) const {
     return strcmp(data, other) == 0;
 }
+bool String::operator==(const GenericString &other) const{
+    return strcmp(data,other.as_string().data);
+}
 
-// this shit doesnt work
-//  bool String::operator==(const GenericString &other) const {
-//      const String &str = as_string(other);
-//      return strcmp(data, str.getData()) == 0;
-//  }
 
-const String &String::as_string() const { return *this; }
 
-String &String::as_string() { return *this; }
+const String &String::as_string() const { return (String&)*this; }
 
+String &String::as_string() {  return (String&)*this; }
+
+StringArray String::split(const char *delimiters) const{
+
+    char* cp=this->data;
+    char* start=cp;
+    char*  tmp;
+    StringArray sArr=StringArray();
+
+    while(*cp)
+    {
+        if((*cp)==*delimiters)
+        {
+            tmp=allocate_and_copy(start,cp-start);
+            String* s=new String(tmp);
+            sArr.Add(*s);
+            start=cp+1;
+            delete tmp;
+        }
+        cp++;
+    }
+    tmp=allocate_and_copy(start,cp-start);
+    String* s=new String(tmp);
+    delete tmp;
+    sArr.Add(*s);
+    
+    return sArr;
+}
+
+String& String::trim()
+{
+    String* s=new String("hello");
+    return *s;
+} 
+
+int String::to_integer() const{
+    return atoi(this->as_string().get_data());
+}
+
+/*
 // should be global
 GenericString *make_string(const char *str) {
 
-    //
+    return nullptr;
+}
+*/
+
+int main()
+{
+    String s=String("one,two,three");
+    StringArray arr=s.split(",");
+    for(int i=0;i<3;i++)
+    {
+        std::cout<<arr[i].as_string().get_data()<<std::endl;
+    }
+    return 0;
 }

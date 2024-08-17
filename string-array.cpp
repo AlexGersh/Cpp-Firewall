@@ -14,25 +14,23 @@ int StringArray::size()
     return this->vec.size();
 }
 
-void StringArray::Add(const GenericString& g)
+void StringArray::Add(GenericString& g)
 {
-    this->vec.push_back(g);
+
+    this->vec.push_back(&g);
 }
 
 
 
 GenericString& StringArray::operator[](int i)
 {
-    //l_front will be iterator
-    return *(this->vec[i]);
+    
+    if(i > this->vec.size())
+        std::cout<<"Out of Boundary"<<std::endl;
+    
+    GenericString& rt=*(this->vec[i]);
+    return rt;
 }
 
 
-
-int main()
-{
-
-
-    return 0;
-}
 
