@@ -7,7 +7,7 @@
 
 |  file  |  code  |  code validation  |  memory validation  |
 | ------ | ------ | ----------------- | ------------------- |
-|string.cpp| :x:|:x:|:x:|
+|string.cpp| :white_check_mark:|:x:|:x:|
 |port.cpp|:x:|:x:|:x:|
 |ip.cpp|:x:|:x:|:x:|
 |firewall.sh|:x:|:x:|:x:|
