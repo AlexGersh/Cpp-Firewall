@@ -6,25 +6,21 @@
 #include <vector>
 
 class StringArray {
-    private:
-    std::vector<GenericString*> vec;
+  private:
+    std::vector<GenericString *> vec;
 
-    public:
+  public:
+    // C'tor D'tor
+    StringArray();
+    StringArray(const StringArray &);
+    ~StringArray();
 
-        //C'tor D'tor
-        StringArray();
-        StringArray(const StringArray&);
-        ~StringArray();
+    // getter and
+    int size();
+    // adding to end
+    void Add(GenericString &);
 
-        //getter and 
-        int size();
-        //adding to end
-        void Add(GenericString&);
-
-        GenericString& operator[](int);
-
+    GenericString &operator[](int);
 };
-
-
 
 #endif

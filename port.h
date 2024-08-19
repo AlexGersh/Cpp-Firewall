@@ -2,28 +2,20 @@
 #define PORT_H
 
 #include "generic-field.h"
-#include "string.h"
 #include "string-array.h"
+#include "string.h"
 
-class PORT : public GenericField
-{
+class PORT : public GenericField {
 
-
-private:
-public:
+  private:
+  public:
     PORT();
     PORT(const char *);
     ~PORT();
 
-    bool match(const GenericString& packet) const;    
+    bool match(const GenericString &packet) const;
 
-    //bool is_mask(String&,String&);
-
+    // bool is_mask(String&,String&);
 };
-
-
-
-
-
 
 #endif

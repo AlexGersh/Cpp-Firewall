@@ -1,36 +1,20 @@
 #include "string-array.h"
 
+StringArray::StringArray() : vec() {};
 
-StringArray::StringArray():vec(){};
+StringArray::StringArray(const StringArray &other) { this->vec = other.vec; }
 
-StringArray::StringArray(const StringArray& other){
-    this->vec=other.vec;
-}
+StringArray::~StringArray() {}
 
-StringArray::~StringArray(){}
+int StringArray::size() { return this->vec.size(); }
 
-int StringArray::size()
-{
-    return this->vec.size();
-}
+void StringArray::Add(GenericString &g) { this->vec.push_back(&g); }
 
-void StringArray::Add(GenericString& g)
-{
+GenericString &StringArray::operator[](int i) {
 
-    this->vec.push_back(&g);
-}
+    if (i > this->vec.size())
+        std::cout << "Out of Boundary" << std::endl;
 
-
-
-GenericString& StringArray::operator[](int i)
-{
-    
-    if(i > this->vec.size())
-        std::cout<<"Out of Boundary"<<std::endl;
-    
-    GenericString& rt=*(this->vec[i]);
+    GenericString &rt = *(this->vec[i]);
     return rt;
 }
-
-
-
