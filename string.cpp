@@ -15,6 +15,8 @@ int String::get_length() const { return length; }
 
 const char *String::get_data() const { return data; }
 
+String::String():data(NULL),length(0){};
+
 String::String(const char *str = "") {
     // if no str provided, by default its an empty string and length will be 0
     length = strlen(str);
@@ -103,7 +105,7 @@ GenericString *make_string(const char *str) {
     return gs;    
 }
 
-
+//Only for testing. need to delete when use as SO
 int main()
 {
     GenericString* s=make_string("test1");

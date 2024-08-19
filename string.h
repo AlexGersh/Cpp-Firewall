@@ -9,6 +9,7 @@ class String : public GenericString {
     static char *allocate_and_copy(const char *data, int size);
 
   public:
+    String();
     String(const char *str);       // copy constructor
     String(const String &str_obj); // copy constructor
     ~String();                     // destructor
