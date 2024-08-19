@@ -72,13 +72,21 @@ StringArray String::split(const char *delimiters) const{
     String* s=new String(tmp);
     delete tmp;
     sArr.Add(*s);
-    
+
     return sArr;
 }
 
 String& String::trim()
 {
-    String* s=new String("hello");
+    char* cp_start=this->data;
+    char* cp_end=cp_start+strlen(cp_start)-1;
+    //find first non space charcter
+    while(*cp_start==' '){cp_start++;}
+    //find last non space charcter
+    while(*cp_end==' '){cp_end--;}
+    char* tmp=allocate_and_copy(cp_start,cp_end-cp_start+1);
+    String* s=new String(tmp);
+    delete tmp;
     return *s;
 } 
 
@@ -86,21 +94,19 @@ int String::to_integer() const{
     return atoi(this->as_string().get_data());
 }
 
-/*
+
 // should be global
 GenericString *make_string(const char *str) {
 
-    return nullptr;
+    GenericString* gs=new String(str);
+
+    return gs;    
 }
-*/
+
 
 int main()
 {
-    String s=String("one,two,three");
-    StringArray arr=s.split(",");
-    for(int i=0;i<3;i++)
-    {
-        std::cout<<arr[i].as_string().get_data()<<std::endl;
-    }
+    GenericString* s=make_string("test1");
+    std::cout<<s->as_string().get_data()<<std::endl;
     return 0;
 }
