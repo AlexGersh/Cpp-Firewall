@@ -13,12 +13,11 @@ private:
     String ip_value;
 public:
     IP();
-
     IP(const char*);
     IP(String&);
     ~IP();
 
-    bool match(const GenericString& packet) const;    
+    bool match(const GenericString& packet) const override;    
 
     bool is_mask(const GenericString&,const GenericString&) const  ;
 
