@@ -13,8 +13,8 @@ test.exe : string.o string-array.o
 main.o: main.cpp
 	$(CXX) $(CXXFLAGS) -c main.cpp -o main.o
 
-libfirewall.so: string.o ip.o port.o 
-	$(CLINK) -shared string.o ip.o port.o -o libfirewall.so 
+libfirewall.so: string.o ip.o port.o string-array.o 
+	$(CLINK) -shared -g string.o string-array.o ip.o port.o -o libfirewall.so 
 
 string-array.o: string-array.cpp string-array.h generic-string.h 
 	$(CXX) $(CXXFLAGS) -c -fpic string-array.cpp 
@@ -26,7 +26,7 @@ port.o: port.cpp port.h generic-field.h
 	$(CXX) $(CXXFLAGS) -c -fpic port.cpp
 
 ip.o: ip.cpp ip.h generic-field.h
-	$(CXX) $(CXXFLAGS) -c -fpic ip.cpp
+	$(CXX) $(CXXFLAGS) -c  -fpic ip.cpp
 
 clean:
 	rm -f *.o libfirewall.so

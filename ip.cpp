@@ -12,8 +12,17 @@ IP::IP(String &s) : IP(s.get_data()) {};
 
 IP::~IP(){};
 
-bool IP::is_mask(const GenericString &value, const GenericString &mask) const {
-    return true;
+bool IP::is_mask(const GenericString &field_ip) const {
+    
+    StringArray rule_addr_mask=ip_rule.split("/");
+    
+    int ip_addr=rule_addr_mask[0].as_string().to_integer();
+    int ip_mask=rule_addr_mask[1].as_string().to_integer();
+
+    int mask=1<<ip_mask;
+    return ip_addr&&(field_ip.as_string().to_integer()&&mask);
+
+
 }
 bool IP::match(const GenericString &packet) const {
 
@@ -32,10 +41,10 @@ bool IP::match(const GenericString &packet) const {
         field = string_arr[i].split("=");
 
         if (ip_name == field[0].as_string().trim()) {
-            if (!is_mask(ip_value, field[1]))
+            if (!is_mask(field[1]))
                 match_flag = false;
         }
     }
 
-    return false;
+    return match_flag;
 }

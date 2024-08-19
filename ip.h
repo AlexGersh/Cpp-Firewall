@@ -21,7 +21,7 @@ class IP : public GenericField {
 
     bool match(const GenericString& packet) const ;    
 
-    bool is_mask(const GenericString&,const GenericString&) const  ;
+    bool is_mask(const GenericString&) const  ;
 
 
 
