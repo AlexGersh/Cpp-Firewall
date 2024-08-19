@@ -10,20 +10,19 @@ IP::IP(const char *cp) : ip_rule(cp) {
 
 IP::IP(String &s) : IP(s.get_data()) {};
 
-IP::~IP(){};
+IP::~IP() {};
 
 bool IP::is_mask(const GenericString &field_ip) const {
-    
-    StringArray rule_addr_mask=ip_rule.split("/");
-    
-    int ip_addr=rule_addr_mask[0].as_string().to_integer();
-    int ip_mask=rule_addr_mask[1].as_string().to_integer();
 
-    int mask=1<<ip_mask;
-    return ip_addr&&(field_ip.as_string().to_integer()&&mask);
+    StringArray rule_addr_mask = ip_rule.split("/");
 
+    int ip_addr = rule_addr_mask[0].as_string().to_integer();
+    int ip_mask = rule_addr_mask[1].as_string().to_integer();
 
+    int mask = 1 << ip_mask;
+    return ip_addr && (field_ip.as_string().to_integer() && mask);
 }
+
 bool IP::match(const GenericString &packet) const {
 
     // spilt all packets to fields
@@ -34,7 +33,7 @@ bool IP::match(const GenericString &packet) const {
     for (int i = 0; i < string_arr.size(); i++) {
         string_arr[i].trim();
     }
-    // now we have string_arr=["src-ip=6.6.6.6",src-port=67"...]
+    // now we have string_arr=["src-ip=6.6.6.6","src-port=67"...]
 
     // validate ip rules
     for (int i = 0; i < string_arr.size(); i++) {

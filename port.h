@@ -10,8 +10,8 @@ class Port : public GenericField {
   private:
     String port_rule;
     String port_name;
-    String port_range_start;
-    String port_range_end;
+    int port_range_start;
+    int port_range_end;
 
   public:
     Port();

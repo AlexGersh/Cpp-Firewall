@@ -15,16 +15,13 @@ class IP : public GenericField {
   public:
     IP();
 
-    IP(const char*);
-    IP(String&);
+    IP(const char *);
+    IP(String &);
     ~IP();
 
-    bool match(const GenericString& packet) const ;    
+    bool match(const GenericString &packet) const;
 
-    bool is_mask(const GenericString&) const  ;
-
-
-
+    bool is_mask(const GenericString &) const;
 };
 
 #endif
