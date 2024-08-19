@@ -18,7 +18,7 @@ class String : public GenericString {
      * @brief Splits this to several sub-strings according to delimiters.
      * @param delimiters A set of characters. For example, when delimieters=" ,"
      * this should be split according to spaces and commas.
-     * @returns A String object.
+     * @returns pointer to array of strings
      */
     StringArray split(const char *delimiters) const;
 

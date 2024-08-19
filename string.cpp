@@ -2,17 +2,20 @@
 #include "string-array.h"
 #include <cstring>
 
+// implementing the private member
 char *String::allocate_and_copy(const char *data, int size) {
     char *str = new char[size + 1];
     memcpy(str, data, size);
-    str[size] = 0;
+    str[size] = '\0'; // closing the string
     return str;
 }
 
+// getters
 int String::get_length() const { return length; }
 
 const char *String::get_data() const { return data; }
 
+// implementing c-tors
 String::String() : data(NULL), length(0) {};
 
 String::String(const char *str = "") {
@@ -26,19 +29,22 @@ String::String(const String &str_obj) {
     data = String::allocate_and_copy(str_obj.get_data(), length);
 }
 
-String::~String() { delete[] data; }
+// implementing d-tor
+String::~String() { delete[] this->data; }
 
+// implementing operators
 String &String::operator=(const char *str) {
     length = strlen(str);
     data = String::allocate_and_copy(str, length);
     return *this;
 }
 
+// other methods
 bool String::operator==(const char *other) const {
-    return strcmp(data, other) == 0;
+    return strcmp(this->data, other) == 0;
 }
 bool String::operator==(const GenericString &other) const {
-    return strcmp(data, other.as_string().data);
+    return strcmp(this->data, other.as_string().data);
 }
 
 const String &String::as_string() const { return (String &)*this; }
@@ -46,11 +52,11 @@ const String &String::as_string() const { return (String &)*this; }
 String &String::as_string() { return (String &)*this; }
 
 StringArray String::split(const char *delimiters) const {
-
+    // helpers
     char *cp = this->data;
     char *start = cp;
     char *tmp;
-    StringArray sArr = StringArray();
+    StringArray sArr;
 
     while (*cp) {
         if ((*cp) == *delimiters) {
@@ -58,20 +64,22 @@ StringArray String::split(const char *delimiters) const {
             String *s = new String(tmp);
             sArr.Add(*s);
             start = cp + 1;
-            delete tmp;
+            delete[] tmp;
         }
         cp++;
     }
+
+    // for the last itteration we had (during while)
     tmp = allocate_and_copy(start, cp - start);
     String *s = new String(tmp);
-    delete tmp;
+    delete[] tmp;
     sArr.Add(*s);
 
     return sArr;
 }
 
 String &String::trim() {
-    char *cp_start = this->data; // cp => char pointer
+    char *cp_start = this->data;
     char *cp_end = cp_start + strlen(cp_start) - 1;
 
     // find first non-space character
@@ -82,9 +90,10 @@ String &String::trim() {
     while (*cp_end == ' ') {
         cp_end--;
     }
+
     char *tmp = allocate_and_copy(cp_start, cp_end - cp_start + 1);
     String *s = new String(tmp);
-    delete tmp;
+    delete[] tmp;
     return *s;
 }
 
@@ -104,3 +113,10 @@ int main() {
     std::cout << s->as_string().get_data() << std::endl;
     return 0;
 }
+
+// to delete////
+String::String() {
+    this->data = NULL;
+    this->length = 0;
+}
+// end to delete///
