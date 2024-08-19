@@ -20,7 +20,7 @@ public:
 
     bool match(const GenericString& packet) const;    
 
-    bool is_mask(GenericString&,GenericString&) const ;
+    bool is_mask(const GenericString&,const GenericString&) const  ;
 
 };
 

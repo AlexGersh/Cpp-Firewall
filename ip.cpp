@@ -13,7 +13,7 @@ IP::IP(const char * cp):ip_rule(cp)
 IP::IP(String& s):IP(s.get_data()){};
 
 
-bool IP::is_mask(GenericString& value,GenericString& mask) const 
+bool IP::is_mask(const GenericString& value,const GenericString& mask) const  
 {
     return true;
 }
