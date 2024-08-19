@@ -5,17 +5,21 @@
 #include "string-array.h"
 #include "string.h"
 
-class PORT : public GenericField {
+class Port : public GenericField {
 
   private:
+    String port_rule;
+    String port_name;
+    String port_range_start;
+    String port_range_end;
+
   public:
-    PORT();
-    PORT(const char *);
-    ~PORT();
+    Port();
+    Port(const char *);
+    Port(String &);
+    ~Port();
 
     bool match(const GenericString &packet) const;
-
-    // bool is_mask(String&,String&);
 };
 
 #endif

@@ -32,7 +32,7 @@ String::String(const String &str_obj) {
 // implementing d-tor
 String::~String() { delete[] this->data; }
 
-// implementing operators
+// implementing operator '='
 String &String::operator=(const char *str) {
     length = strlen(str);
     data = String::allocate_and_copy(str, length);
@@ -106,17 +106,3 @@ GenericString *make_string(const char *str) {
 
     return gs;
 }
-
-// Only for testing. need to delete when use as SO
-int main() {
-    GenericString *s = make_string("test1");
-    std::cout << s->as_string().get_data() << std::endl;
-    return 0;
-}
-
-// to delete////
-String::String() {
-    this->data = NULL;
-    this->length = 0;
-}
-// end to delete///
