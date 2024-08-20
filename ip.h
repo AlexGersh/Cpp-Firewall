@@ -23,10 +23,6 @@ class IP : public GenericField {
 
     bool is_mask(const GenericString&) const ;
     static int get_ip_addr_int(const GenericString&) ;
-
-
-
-    bool is_mask(const GenericString &) const;
 };
 
 #endif

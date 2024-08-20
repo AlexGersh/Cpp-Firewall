@@ -18,18 +18,15 @@ int IP::get_ip_addr_int(const GenericString& ip)
     StringArray ip_field_array=ip.split(".");
     
     int ip_num=0;
-    int shifter=0;
-    const int shift_inc=8;
+    const int shifter=8;
     char curr_ip_num=0;
     
     for(int i=0;i<ip_field_array.size();i++)
     {
-        std::cout<<ip.as_string().get_data()<<","<<(int)curr_ip_num<<","<<ip_num<<","<<shifter<<std::endl;    
         curr_ip_num=ip_field_array[i].as_string().to_integer();
 
         ip_num=ip_num<<shifter;
         ip_num+=curr_ip_num;
-        shifter+=shift_inc;
     }
     std::cout<<"end of func"<<std::endl;
 
@@ -37,22 +34,9 @@ int IP::get_ip_addr_int(const GenericString& ip)
 }
 
 bool IP::is_mask(const GenericString &field_ip) const {
-<<<<<<< HEAD
-
-    StringArray rule_addr_mask = ip_rule.split("/");
-=======
     
     StringArray rule_addr_mask=ip_value.split("/");
     
-    //convert ip string into int ip
-    int ip_addr=get_ip_addr_int(rule_addr_mask[0]);
-    int ip_field_addr=get_ip_addr_int(field_ip);
-    //convert mask string into int mask
-    int ip_mask=rule_addr_mask[1].as_string().to_integer();
-
-    int mask=(1<<ip_mask)-1;
-    return field_ip.as_string().to_integer()==(ip_addr&&mask);
->>>>>>> b8f0b1a (adding to ip class)
 
     int ip_addr = rule_addr_mask[0].as_string().to_integer();
     int ip_mask = rule_addr_mask[1].as_string().to_integer();
