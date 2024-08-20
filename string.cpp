@@ -106,3 +106,13 @@ GenericString *make_string(const char *str) {
 
     return gs;
 }
+<<<<<<< HEAD
+=======
+
+// Only for testing. need to delete when use as SO
+int main() {
+    GenericString *s = make_string("test1");
+    std::cout << s->as_string().get_data() << std::endl;
+    return 0;
+}
+>>>>>>> b8f0b1a (adding to ip class)

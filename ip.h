@@ -19,7 +19,16 @@ class IP : public GenericField {
     IP(String &);
     ~IP();
 
+<<<<<<< HEAD
     bool match(const GenericString &packet) const;
+=======
+    bool match(const GenericString& packet) const ;    
+
+    bool is_mask(const GenericString&) const ;
+    static int get_ip_addr_int(const GenericString&) ;
+
+
+>>>>>>> b8f0b1a (adding to ip class)
 
     bool is_mask(const GenericString &) const;
 };
