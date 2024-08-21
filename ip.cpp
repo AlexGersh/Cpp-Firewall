@@ -12,45 +12,42 @@ IP::IP(String &s) : IP(s.get_data()) {};
 
 IP::~IP() {};
 
-int IP::get_ip_addr_int(const GenericString& ip) 
-{
-    //seperate ip by .
-    StringArray ip_field_array=ip.split(".");
-    
-    int ip_num=0;
-    const int shifter=8;
-    char curr_ip_num=0;
-    
-    for(int i=0;i<ip_field_array.size();i++)
-    {
-        curr_ip_num=ip_field_array[i].as_string().to_integer();
+int IP::get_ip_addr_int(const GenericString &ip) {
+    // seperate ip by .
+    StringArray ip_field_array = ip.split(".");
 
-        ip_num=ip_num<<shifter;
-        ip_num+=curr_ip_num;
+    int ip_num = 0;
+    const int shifter = 8;
+    char curr_ip_num = 0;
+
+    for (int i = 0; i < ip_field_array.size(); i++) {
+        curr_ip_num = ip_field_array[i].as_string().to_integer();
+
+        ip_num = ip_num << shifter;
+        ip_num += curr_ip_num;
     }
 
-    return ip_num;    
+    return ip_num;
 }
 
 bool IP::is_mask(const GenericString &field_ip) const {
-    
-    StringArray rule_addr_mask=ip_value.split("/");
-    
+
+    StringArray rule_addr_mask = ip_value.split("/");
 
     int ip_addr = get_ip_addr_int(rule_addr_mask[0]);
-    int ip_field_addr=get_ip_addr_int(field_ip);
+    int ip_field_addr = get_ip_addr_int(field_ip);
 
     int ip_mask = rule_addr_mask[1].as_string().to_integer();
-    
-    int mask = (~0u)<<(32-ip_mask);
-    
+
+    int mask = (~0u) << (32 - ip_mask);
+
     // mask only the relevant bits
-    ip_addr=ip_addr&mask;
-    ip_field_addr=ip_field_addr& mask;
-    //wil and both ip's and mask to check if the same
-    
-    bool rt=!(ip_addr^ip_field_addr);
-    return rt; 
+    ip_addr = ip_addr & mask;
+    ip_field_addr = ip_field_addr & mask;
+    // wil and both ip's and mask to check if the same
+
+    bool rt = !(ip_addr ^ ip_field_addr);
+    return rt;
 }
 
 bool IP::match(const GenericString &packet) const {
@@ -70,8 +67,10 @@ bool IP::match(const GenericString &packet) const {
         field = string_arr[i].split("=");
 
         if (ip_name == field[0].as_string().trim()) {
-            if (!is_mask(field[1].as_string().trim()))
+            if (!is_mask(field[1].as_string().trim())) {
                 match_flag = false;
+                return match_flag;
+            }
         }
     }
 

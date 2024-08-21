@@ -22,11 +22,15 @@ Port::Port(String &s) : Port(s.get_data()) {};
 // d-tor, nothing special
 Port::~Port() {};
 
-bool Port::same_port(const GenericString &field_port) const {
-    String tmp = field_port.as_string();
-    //
+bool Port::right_port(const GenericString &field_port) const {
+    String port_str = field_port.as_string();
+    short port_int = port_str.trim().to_integer();
 
-    return true;
+    // validate
+    if (port_int >= this->port_range_start && port_int <= port_range_end)
+        return true;
+    // else
+    return false;
 }
 
 bool Port::match(const GenericString &packet) const {
@@ -46,8 +50,12 @@ bool Port::match(const GenericString &packet) const {
         field = string_arr[i].split("=");
 
         if (port_name == field[0].as_string().trim()) {
-            // if (same_port(field[1].as_string.trim()))
-            //     match_flag = false;
+            if (!right_port(field[1].as_string().trim())) {
+                match_flag = false;
+                return match_flag;
+            }
         }
     }
+
+    return match_flag;
 }
