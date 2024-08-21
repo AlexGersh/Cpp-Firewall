@@ -19,7 +19,7 @@ class StringArray {
     int size();
     // adding to end
     void Add(GenericString &);
-
+    void clear();
     GenericString &operator[](int);
 };
 

@@ -6,7 +6,6 @@ StringArray::StringArray(const StringArray &other) { this->vec = other.vec; }
 
 StringArray::~StringArray() 
 {
-    std::cout<<"delete vec"<<std::endl;
 }
 
 int StringArray::size() { return this->vec.size(); }
@@ -20,4 +19,14 @@ GenericString &StringArray::operator[](int i) {
 
     GenericString &rt = *(this->vec[i]);
     return rt;
+}
+
+void StringArray::clear()
+{
+    
+    for( GenericString*  ptr : vec)
+    {
+        delete ptr;
+    }
+    vec.clear();
 }

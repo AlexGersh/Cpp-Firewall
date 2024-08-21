@@ -65,7 +65,6 @@ bool IP::match(const GenericString &packet) const {
     // validate ip rules
     for (int i = 0; i < string_arr.size(); i++) {
         field = string_arr[i].split("=");
-
         if (ip_name == field[0].as_string().trim()) {
             if (!is_mask(field[1].as_string().trim())) {
                 match_flag = false;

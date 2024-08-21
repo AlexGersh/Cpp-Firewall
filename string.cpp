@@ -30,7 +30,10 @@ String::String(const String &str_obj) {
 }
 
 // implementing d-tor
-String::~String() { delete[] this->data; }
+String::~String() 
+{ 
+    std::cout<<"deleting String="<<data<<std::endl;
+    delete[] this->data; }
 
 // implementing operator '='
 String &String::operator=(const char *str) {
