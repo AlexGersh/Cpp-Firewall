@@ -121,3 +121,9 @@ int main() {
     std::cout << s->as_string().get_data() << std::endl;
     return 0;
 }
+
+
+bool String::locate(const char* str)
+{
+    return strstr(data,str)!=NULL;
+}

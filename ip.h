@@ -17,7 +17,7 @@ class IP : public GenericField {
 
     IP(const char *);
     IP(String &);
-    IP(IP&);
+    IP(const IP&);
     ~IP();
 
     IP& operator=(const IP&);
