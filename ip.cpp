@@ -6,11 +6,20 @@ IP::IP(const char *cp) : ip_rule(cp) {
     StringArray string_array = ip_rule.split("=");
     ip_name = string_array[0].as_string().trim();
     ip_value = string_array[1].as_string().trim();
+    string_array.clear();
 }
 
 IP::IP(String &s) : IP(s.get_data()) {};
-
+IP::IP(IP&other):ip_rule(other.ip_rule),ip_name(other.ip_name),ip_value(other.ip_value){};
 IP::~IP() {};
+
+IP& IP::operator=(const IP& other)
+{
+    ip_rule=other.ip_rule;
+    ip_name=other.ip_name;
+    ip_value=other.ip_value;
+    return *this;
+}
 
 int IP::get_ip_addr_int(const GenericString &ip) {
     // seperate ip by .
@@ -27,6 +36,7 @@ int IP::get_ip_addr_int(const GenericString &ip) {
         ip_num += curr_ip_num;
     }
 
+    ip_field_array.clear();
     return ip_num;
 }
 
@@ -47,6 +57,7 @@ bool IP::is_mask(const GenericString &field_ip) const {
     // wil and both ip's and mask to check if the same
 
     bool rt = !(ip_addr ^ ip_field_addr);
+    rule_addr_mask.clear();
     return rt;
 }
 
@@ -73,5 +84,7 @@ bool IP::match(const GenericString &packet) const {
         }
     }
 
+    string_arr.clear();
+    field.clear();
     return match_flag;
 }

@@ -17,8 +17,10 @@ class IP : public GenericField {
 
     IP(const char *);
     IP(String &);
+    IP(IP&);
     ~IP();
 
+    IP& operator=(const IP&);
     bool match(const GenericString& packet) const ;    
 
     bool is_mask(const GenericString&) const ;

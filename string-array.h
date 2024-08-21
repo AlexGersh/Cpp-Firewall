@@ -15,6 +15,8 @@ class StringArray {
     StringArray(const StringArray &);
     ~StringArray();
 
+    StringArray& operator=(const StringArray&);
+
     // getter and
     int size();
     // adding to end

@@ -8,6 +8,13 @@ StringArray::~StringArray()
 {
 }
 
+StringArray& StringArray::operator=(const StringArray& other)
+{
+    this->vec.clear();
+    this->vec=other.vec;
+    return *this;
+}
+
 int StringArray::size() { return this->vec.size(); }
 
 void StringArray::Add(GenericString &g) { this->vec.push_back(&g); }

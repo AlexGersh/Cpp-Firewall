@@ -27,12 +27,15 @@ class String : public GenericString {
      * @returns A reference to this.
      */
     String &operator=(const char *str);
-
+    
+    String &operator=(const String&);  
     /**
      * @brief Remove any leading or trailing white-spaces from this.
      * @returns A reference to this.
      */
     String &trim() override;
+
+  
 
     /**
      * @brief Returns true if the contents of this == the contents of other.
