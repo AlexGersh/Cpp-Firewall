@@ -17,10 +17,24 @@ Port::Port(const char *cp) {
 }
 
 // #2 cpy c-tor, using the #1
-Port::Port(String &s) : Port(s.get_data()) {};
+Port::Port(const String &s) : Port(s.get_data()) {}
+
+// #3 cpy c-tor
+Port::Port(const Port &port)
+    : port_rule(port.port_rule), port_name(port.port_name),
+      port_range_start(port.port_range_start),
+      port_range_end(port.port_range_end) {}
 
 // d-tor, nothing special
-Port::~Port() {};
+Port::~Port() {}
+
+Port &Port::operator=(const Port &other) {
+    port_rule = other.port_rule;
+    port_name = other.port_name;
+    port_range_start = other.port_range_start;
+    port_range_end = other.port_range_end;
+    return *this;
+}
 
 bool Port::right_port(const GenericString &field_port) const {
     String port_str = field_port.as_string();

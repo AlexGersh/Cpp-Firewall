@@ -6,7 +6,6 @@
 #include "string.h"
 
 class Port : public GenericField {
-
   private:
     String port_rule;
     String port_name;
@@ -16,10 +15,11 @@ class Port : public GenericField {
   public:
     Port();
     Port(const char *);
-    Port(String &);
+    Port(const String &);
+    Port(const Port &);
     ~Port();
 
-    bool right_port(const GenericString &field_port) const ;
+    bool right_port(const GenericString &field_port) const;
 
     bool match(const GenericString &packet) const;
 };
