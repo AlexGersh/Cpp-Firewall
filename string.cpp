@@ -44,7 +44,7 @@ bool String::operator==(const char *other) const {
     return strcmp(this->data, other) == 0;
 }
 bool String::operator==(const GenericString &other) const {
-    return strcmp(this->data, other.as_string().data);
+    return strcmp(this->data, other.as_string().data)==0;
 }
 
 const String &String::as_string() const { return (String &)*this; }
