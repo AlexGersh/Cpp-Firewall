@@ -4,7 +4,7 @@
 #include "generic-string.h"
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 class StringArray {
   private:
     std::vector<GenericString *> vec;

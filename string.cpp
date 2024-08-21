@@ -92,9 +92,9 @@ String &String::trim() {
     }
 
     char *tmp = allocate_and_copy(cp_start, cp_end - cp_start + 1);
-    String *s = new String(tmp);
-    delete[] tmp;
-    return *s;
+    delete[] data;
+    this->data=tmp;
+    return *this;
 }
 
 int String::to_integer() const { return atoi(this->as_string().get_data()); }

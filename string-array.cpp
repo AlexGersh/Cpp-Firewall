@@ -4,7 +4,10 @@ StringArray::StringArray() : vec() {};
 
 StringArray::StringArray(const StringArray &other) { this->vec = other.vec; }
 
-StringArray::~StringArray() {}
+StringArray::~StringArray() 
+{
+    std::cout<<"delete vec"<<std::endl;
+}
 
 int StringArray::size() { return this->vec.size(); }
 
