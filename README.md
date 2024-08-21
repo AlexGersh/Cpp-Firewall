@@ -9,7 +9,7 @@
 | ------ | ------ | ----------------- | ------------------- |
 |string.cpp| :white_check_mark:|:x:|:x:|
 |port.cpp|:x:|:x:|:x:|
-|ip.cpp|:x:|:x:|:x:|
+|ip.cpp|:white_check_mark:|:white_check_mark:|:x:|
 |firewall.sh|:x:|:x:|:x:|
 |string-array.cpp|:white_check_mark:|:white_check_mark:|:x:|
 |firewall.exe|:x:|:x:|:x:|
