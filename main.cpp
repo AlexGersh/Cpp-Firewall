@@ -2,7 +2,8 @@
 #include "port.h"
 #include "ip.h"
 #include "string-array.h"
-
+#include "string.h"
+#include "generic-string.h"
 
 int main(int argc,char** argv){
 
@@ -25,4 +26,28 @@ int main(int argc,char** argv){
     std::cout<<"is there match-port?\n"<<port2.match(packet1)<<std::endl;
     std::cout<<"is there match-port?\n"<<port1.match(packet2)<<std::endl;
     std::cout<<"is there match-port?\n"<<port2.match(packet2)<<std::endl;
+
+
+    if(false)
+    {
+        Generic-field* gf=0;
+        if(argc!=2)
+        {
+            std::cout<<"Error: should pass only 1 argument"<<std::endl;
+            return 1;
+        }
+        //this is the first arguemnt
+        String rule=argv[1];
+        if(rule.locate("port"))
+        {
+            fg=new Port(rule);
+        }else
+        {
+            fg=new IP(rule);
+        }
+
+        parse_input(*fg);
+        return 0;   
+    }
+    
 }
