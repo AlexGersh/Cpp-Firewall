@@ -23,7 +23,7 @@ Port::Port(const String &s) : Port(s.get_data()) {}
 Port::Port(const Port &port)
     : port_rule(port.port_rule), port_name(port.port_name),
       port_range_start(port.port_range_start),
-      port_range_end(port.port_range_end) {}
+      port_range_end(port.port_range_end) {};
 
 // d-tor, nothing special
 Port::~Port() {}

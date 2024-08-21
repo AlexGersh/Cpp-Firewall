@@ -19,6 +19,7 @@ class Port : public GenericField {
     Port(const Port &);
     ~Port();
 
+    Port& operator=(const Port&);
     bool right_port(const GenericString &field_port) const;
 
     bool match(const GenericString &packet) const;
