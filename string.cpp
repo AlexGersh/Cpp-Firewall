@@ -39,6 +39,14 @@ String &String::operator=(const char *str) {
     return *this;
 }
 
+String& String::operator=(const String& other)
+{
+    length=other.length;
+    delete [] data;
+    data=allocate_and_copy(other.data,other.length);
+
+    return *this;
+}
 // other methods
 bool String::operator==(const char *other) const {
     return strcmp(this->data, other) == 0;

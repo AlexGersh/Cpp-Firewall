@@ -18,7 +18,7 @@ IP& IP::operator=(const IP& other)
     ip_rule=other.ip_rule;
     ip_name=other.ip_name;
     ip_value=other.ip_value;
-    return *this;
+    return *this; 
 }
 
 int IP::get_ip_addr_int(const GenericString &ip) {
