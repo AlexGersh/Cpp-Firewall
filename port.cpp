@@ -38,7 +38,7 @@ Port &Port::operator=(const Port &other) {
 
 bool Port::right_port(const GenericString &field_port) const {
     String port_str = field_port.as_string();
-    short port_int = port_str.trim().to_integer();
+    unsigned short port_int = port_str.trim().to_integer();
 
     // validate
     if (port_int >= this->port_range_start && port_int <= port_range_end)
