@@ -39,11 +39,10 @@ String &String::operator=(const char *str) {
     return *this;
 }
 
-String& String::operator=(const String& other)
-{
-    length=other.length;
-    delete [] data;
-    data=allocate_and_copy(other.data,other.length);
+String &String::operator=(const String &other) {
+    length = other.length;
+    delete[] data;
+    data = allocate_and_copy(other.data, other.length);
 
     return *this;
 }
@@ -52,7 +51,7 @@ bool String::operator==(const char *other) const {
     return strcmp(this->data, other) == 0;
 }
 bool String::operator==(const GenericString &other) const {
-    return strcmp(this->data, other.as_string().data)==0;
+    return strcmp(this->data, other.as_string().data) == 0;
 }
 
 const String &String::as_string() const { return (String &)*this; }
@@ -101,7 +100,7 @@ String &String::trim() {
 
     char *tmp = allocate_and_copy(cp_start, cp_end - cp_start + 1);
     delete[] data;
-    this->data=tmp;
+    this->data = tmp;
     return *this;
 }
 
@@ -122,8 +121,4 @@ int main() {
     return 0;
 }
 
-
-bool String::locate(const char* str)
-{
-    return strstr(data,str)!=NULL;
-}
+bool String::locate(const char *str) { return strstr(data, str) != NULL; }

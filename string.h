@@ -28,17 +28,15 @@ class String : public GenericString {
      */
     String &operator=(const char *str);
     /**
-    *@brief operator overloading for string
-    *@return A refernce to this
-    */ 
-    String &operator=(const String&);  
+     *@brief operator overloading for string
+     *@return A refernce to this
+     */
+    String &operator=(const String &);
     /**
      * @brief Remove any leading or trailing white-spaces from this.
      * @returns A reference to this.
      */
     String &trim() override;
-
-  
 
     /**
      * @brief Returns true if the contents of this == the contents of other.
@@ -69,12 +67,11 @@ class String : public GenericString {
      */
     const char *get_data() const;
 
-  /**
-  * @brief finds if string located inside the String instance
-  * @return true- if string located inside the String instance. else-false
-  */
-    bool locate(const char* str);
-
+    /**
+     * @brief finds if string located inside the String instance
+     * @return true- if string located inside the String instance. else-false
+     */
+    bool locate(const char *str);
 };
 
 GenericString *make_string(const char *str);

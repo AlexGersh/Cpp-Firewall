@@ -10,15 +10,16 @@ IP::IP(const char *cp) : ip_rule(cp) {
 }
 
 IP::IP(String &s) : IP(s.get_data()) {};
-IP::IP(const IP& other):ip_rule(other.ip_rule),ip_name(other.ip_name),ip_value(other.ip_value){};
+IP::IP(const IP &other)
+    : ip_rule(other.ip_rule), ip_name(other.ip_name),
+      ip_value(other.ip_value) {};
 IP::~IP() {};
 
-IP& IP::operator=(const IP& other)
-{
-    ip_rule=other.ip_rule;
-    ip_name=other.ip_name;
-    ip_value=other.ip_value;
-    return *this; 
+IP &IP::operator=(const IP &other) {
+    ip_rule = other.ip_rule;
+    ip_name = other.ip_name;
+    ip_value = other.ip_value;
+    return *this;
 }
 
 int IP::get_ip_addr_int(const GenericString &ip) {

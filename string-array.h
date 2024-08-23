@@ -2,9 +2,10 @@
 #define STRING_ARRAY_H
 
 #include "generic-string.h"
+#include "string.h"
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 class StringArray {
   private:
     std::vector<GenericString *> vec;
@@ -15,7 +16,7 @@ class StringArray {
     StringArray(const StringArray &);
     ~StringArray();
 
-    StringArray& operator=(const StringArray&);
+    StringArray &operator=(const StringArray &);
 
     // getter and
     int size();

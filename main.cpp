@@ -10,7 +10,11 @@ int main(int argc, char **argv) {
     
     GenericField* gf=0;
 
-
+   /* StringArray test1;
+    String s="hello";
+    test1.Add(s);
+    StringArray test2=test1;
+*/
     if(argc!=2)
     {
         std::cout<<"Error: need pass only one argument";

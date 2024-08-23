@@ -14,6 +14,9 @@ Port::Port(const char *cp) {
     StringArray tmp_string_array = tmp.split("-");
     port_range_start = tmp_string_array[0].as_string().to_integer();
     port_range_end = tmp_string_array[1].as_string().to_integer();
+
+    string_array.clear();
+    tmp_string_array.clear();
 }
 
 // #2 cpy c-tor, using the #1
@@ -69,7 +72,10 @@ bool Port::match(const GenericString &packet) const {
                 return match_flag;
             }
         }
+        field.clear(); 
     }
-
+    
+    string_arr.clear();
+    field.clear();
     return match_flag;
 }
