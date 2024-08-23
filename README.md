@@ -1,6 +1,6 @@
-# hw6
+# Hw6
 
-## progress
+## Progress
 
 <!---:white_check_mark:
 :x:-->
@@ -14,7 +14,7 @@
 |string-array.cpp|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |firewall.exe|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
-## Tasks
+#### Tasks
 ### Timor - :x:
 
 ### Alex - :x:
