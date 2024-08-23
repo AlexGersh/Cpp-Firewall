@@ -10,13 +10,11 @@
 |string.cpp| :white_check_mark:|:white_check_mark:|:white_check_mark:|
 |port.cpp|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |ip.cpp|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|firewall.sh|:x:|:x:|
+|firewall.sh|:white_check_mark:|:white_check_mark:|
 |string-array.cpp|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|firewall.exe|:x:|:x:|:x:|
-
+|firewall.exe|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 ## Tasks
-### Timor
+### Timor - :x:
 
-
-### Alex
+### Alex - :x:
