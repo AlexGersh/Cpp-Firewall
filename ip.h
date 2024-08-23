@@ -24,7 +24,7 @@ class IP : public GenericField {
     bool match(const GenericString &packet) const;
 
     bool is_mask(const GenericString &) const;
-    static int get_ip_addr_int(const GenericString &);
+    static int get_ip_addr_int(const GenericString *);
 };
 
 #endif

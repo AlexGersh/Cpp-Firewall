@@ -8,15 +8,13 @@ Port::Port() {}
 Port::Port(const char *cp) {
     port_rule = cp;
     StringArray string_array = port_rule.split("=");
-    port_name = string_array[0].as_string().trim();
+    port_name = string_array[0]->as_string().trim();
 
-    String tmp = string_array[1].as_string().trim();
+    String tmp = string_array[1]->as_string().trim();
     StringArray tmp_string_array = tmp.split("-");
-    port_range_start = tmp_string_array[0].as_string().to_integer();
-    port_range_end = tmp_string_array[1].as_string().to_integer();
+    port_range_start = tmp_string_array[0]->as_string().to_integer();
+    port_range_end = tmp_string_array[1]->as_string().to_integer();
 
-    string_array.clear();
-    tmp_string_array.clear();
 }
 
 // #2 cpy c-tor, using the #1
@@ -58,24 +56,21 @@ bool Port::match(const GenericString &packet) const {
 
     // trim each field
     for (int i = 0; i < string_arr.size(); i++) {
-        string_arr[i].trim();
+        string_arr[i]->as_string().trim();
     }
     // now string_arr={"src-ip=6.6.6.6","src-port=67",...}
 
     // checking
     for (int i = 0; i < string_arr.size(); i++) {
-        field = string_arr[i].split("=");
+        field = string_arr[i]->as_string().split("=");
 
-        if (port_name == field[0].as_string().trim()) {
-            if (!right_port(field[1].as_string().trim())) {
+        if (port_name == field[0]->as_string().trim()) {
+            if (!right_port(field[1]->as_string().trim())) {
                 match_flag = false;
                 return match_flag;
             }
         }
-        field.clear(); 
     }
     
-    string_arr.clear();
-    field.clear();
     return match_flag;
 }

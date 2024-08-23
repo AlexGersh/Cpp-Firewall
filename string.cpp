@@ -68,8 +68,8 @@ StringArray String::split(const char *delimiters) const {
     while (*cp) {
         if ((*cp) == *delimiters) {
             tmp = allocate_and_copy(start, cp - start);
-            String *s = new String(tmp);
-            sArr.Add(*s);
+            GenericString *s = new String(tmp);
+            sArr.add(s);
             start = cp + 1;
             delete[] tmp;
         }
@@ -78,9 +78,9 @@ StringArray String::split(const char *delimiters) const {
 
     // for the last itteration we had (during while)
     tmp = allocate_and_copy(start, cp - start);
-    String *s = new String(tmp);
+    GenericString *s = new String(tmp);
     delete[] tmp;
-    sArr.Add(*s);
+    sArr.add(s);
 
     return sArr;
 }

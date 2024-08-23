@@ -6,9 +6,11 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+
+#define SIZE 4
 class StringArray {
   private:
-    std::vector<GenericString *> vec;
+     GenericString*  gs_arr[SIZE];
 
   public:
     // C'tor D'tor
@@ -19,11 +21,10 @@ class StringArray {
     StringArray &operator=(const StringArray &);
 
     // getter and
-    int size();
+    int size() const ;
     // adding to end
-    void Add(GenericString &);
-    void clear();
-    GenericString &operator[](int);
+    void add(GenericString *);
+    GenericString* operator[](int);
 };
 
 #endif

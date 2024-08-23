@@ -1,0 +1,757 @@
+desc: (none)
+cmd: ./firewall.exe dst-port=0-30000
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2539751
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2661896
+mem_heap_B=72721
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2806103
+mem_heap_B=77431
+mem_heap_extra_B=329
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2900084
+mem_heap_B=78394
+mem_heap_extra_B=286
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=3005913
+mem_heap_B=78644
+mem_heap_extra_B=516
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=3124180
+mem_heap_B=79130
+mem_heap_extra_B=910
+mem_stacks_B=0
+heap_tree=detailed
+n3: 79130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n0: 1306 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=3211621
+mem_heap_B=78765
+mem_heap_extra_B=683
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=3287426
+mem_heap_B=79365
+mem_heap_extra_B=1091
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=3393339
+mem_heap_B=79685
+mem_heap_extra_B=1427
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3463122
+mem_heap_B=79982
+mem_heap_extra_B=1594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3565241
+mem_heap_B=80512
+mem_heap_extra_B=2040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3652455
+mem_heap_B=80945
+mem_heap_extra_B=2383
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3766907
+mem_heap_B=80832
+mem_heap_extra_B=2360
+mem_stacks_B=0
+heap_tree=detailed
+n5: 80832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n2: 1152 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 864 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 864 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 864 0x1093FD: main (main.cpp:37)
+  n0: 288 in 3 places, all below massif's threshold (1.00%)
+ n2: 1071 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 1028 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 848 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 848 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 848 0x1093FD: main (main.cpp:37)
+   n0: 180 in 5 places, all below massif's threshold (1.00%)
+  n0: 43 in 6 places, all below massif's threshold (1.00%)
+ n0: 785 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=3871085
+mem_heap_B=81674
+mem_heap_extra_B=2942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3953202
+mem_heap_B=81972
+mem_heap_extra_B=3220
+mem_stacks_B=0
+heap_tree=detailed
+n5: 81972 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n2: 1584 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 1200 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 1200 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1200 0x1093FD: main (main.cpp:37)
+  n0: 384 in 3 places, all below massif's threshold (1.00%)
+ n2: 1563 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 1372 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 1132 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 1132 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 1132 0x1093FD: main (main.cpp:37)
+   n0: 240 in 5 places, all below massif's threshold (1.00%)
+  n0: 191 in 6 places, all below massif's threshold (1.00%)
+ n0: 1001 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=4040490
+mem_heap_B=82212
+mem_heap_extra_B=3476
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=4184462
+mem_heap_B=82442
+mem_heap_extra_B=3662
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=4283035
+mem_heap_B=82442
+mem_heap_extra_B=3662
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=4399670
+mem_heap_B=83013
+mem_heap_extra_B=4059
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=4474419
+mem_heap_B=83036
+mem_heap_extra_B=4092
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=4592769
+mem_heap_B=83472
+mem_heap_extra_B=4424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=4643600
+mem_heap_B=83720
+mem_heap_extra_B=4640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=4750575
+mem_heap_B=84200
+mem_heap_extra_B=5064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=4838868
+mem_heap_B=84501
+mem_heap_extra_B=5347
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4978833
+mem_heap_B=84959
+mem_heap_extra_B=5721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=5122960
+mem_heap_B=85188
+mem_heap_extra_B=5908
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5208038
+mem_heap_B=85300
+mem_heap_extra_B=5924
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5303084
+mem_heap_B=85530
+mem_heap_extra_B=6126
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5435435
+mem_heap_B=85756
+mem_heap_extra_B=6300
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5523069
+mem_heap_B=86250
+mem_heap_extra_B=6686
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=5648896
+mem_heap_B=86560
+mem_heap_extra_B=6952
+mem_stacks_B=0
+heap_tree=detailed
+n6: 86560 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n2: 3504 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 2640 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 2640 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 2640 0x1093FD: main (main.cpp:37)
+  n0: 864 in 3 places, all below massif's threshold (1.00%)
+ n2: 3271 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 3079 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 2539 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 2539 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 2539 0x1093FD: main (main.cpp:37)
+   n0: 540 in 5 places, all below massif's threshold (1.00%)
+  n0: 192 in 6 places, all below massif's threshold (1.00%)
+ n1: 1728 0x4859AA5: String::split(char const*) const (string.cpp:83)
+  n0: 1728 in 4 places, all below massif's threshold (1.00%)
+ n0: 233 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=5735871
+mem_heap_B=86799
+mem_heap_extra_B=7209
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=5826991
+mem_heap_B=87258
+mem_heap_extra_B=7582
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5964255
+mem_heap_B=87952
+mem_heap_extra_B=8136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=6045586
+mem_heap_B=88293
+mem_heap_extra_B=8339
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6185060
+mem_heap_B=88715
+mem_heap_extra_B=8709
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=6309088
+mem_heap_B=89248
+mem_heap_extra_B=9120
+mem_stacks_B=0
+heap_tree=detailed
+n6: 89248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n3: 4608 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 3456 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 3456 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 3456 0x1093FD: main (main.cpp:37)
+  n1: 1152 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1152 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1152 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 4247 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 4094 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 3389 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 3389 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 3389 0x1093FD: main (main.cpp:37)
+   n0: 705 in 5 places, all below massif's threshold (1.00%)
+  n0: 153 in 6 places, all below massif's threshold (1.00%)
+ n3: 2304 0x4859AA5: String::split(char const*) const (string.cpp:83)
+  n1: 1152 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 1152 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1152 0x1093FD: main (main.cpp:37)
+  n1: 1152 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1152 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1152 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n0: 265 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=6390543
+mem_heap_B=88869
+mem_heap_extra_B=8883
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=6462287
+mem_heap_B=89217
+mem_heap_extra_B=9103
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6580810
+mem_heap_B=89332
+mem_heap_extra_B=9252
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=6688735
+mem_heap_B=89658
+mem_heap_extra_B=9454
+mem_stacks_B=0
+heap_tree=detailed
+n6: 89658 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n3: 4800 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 3600 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 3600 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 3600 0x1093FD: main (main.cpp:37)
+  n1: 1200 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1200 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1200 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 4409 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 4272 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 3537 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 3537 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 3537 0x1093FD: main (main.cpp:37)
+   n0: 735 in 5 places, all below massif's threshold (1.00%)
+  n0: 137 in 6 places, all below massif's threshold (1.00%)
+ n3: 2376 0x4859AA5: String::split(char const*) const (string.cpp:83)
+  n1: 1200 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 1200 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1200 0x1093FD: main (main.cpp:37)
+  n1: 1176 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1176 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1176 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n0: 249 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=6763943
+mem_heap_B=89411
+mem_heap_extra_B=9261
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6872095
+mem_heap_B=89564
+mem_heap_extra_B=9436
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=6944025
+mem_heap_B=89899
+mem_heap_extra_B=9629
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=7023079
+mem_heap_B=90388
+mem_heap_extra_B=10036
+mem_stacks_B=0
+heap_tree=peak
+n6: 90388 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n3: 5088 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 3816 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 3816 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 3816 0x1093FD: main (main.cpp:37)
+  n1: 1272 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 4683 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 4530 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 3750 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 3750 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 3750 0x1093FD: main (main.cpp:37)
+   n0: 780 in 5 places, all below massif's threshold (1.00%)
+  n0: 153 in 6 places, all below massif's threshold (1.00%)
+ n3: 2544 0x4859AA5: String::split(char const*) const (string.cpp:83)
+  n1: 1272 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n1: 1272 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n0: 249 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=7133177
+mem_heap_B=90371
+mem_heap_extra_B=10013
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=7280532
+mem_heap_B=90381
+mem_heap_extra_B=10043
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=7401504
+mem_heap_B=90257
+mem_heap_extra_B=9991
+mem_stacks_B=0
+heap_tree=detailed
+n6: 90257 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x491A939: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n1: 72704 0x40202C9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFEFFFFBE: ???
+        n0: 72704 0x1FFEFFFFCD: ???
+ n1: 5120 0x4B3CBA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 5120 0x4B4BCDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4B4ACDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4B4BD95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x49828C0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+      n1: 4096 0x49387E9: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+       n1: 4096 0x486447E: getline<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6461)
+        n1: 4096 0x486447E: parse_input(GenericField const&) (input.cpp:34)
+         n0: 4096 0x1093FD: main (main.cpp:37)
+   n1: 1024 0x4B4AF5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x4B496D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x4B496D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x4B3DFD6: fwrite (iofwrite.c:39)
+       n1: 1024 0x49ACB64: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+        n1: 1024 0x4864499: operator<< <char, std::char_traits<char>, std::allocator<char> > (basic_string.h:6424)
+         n1: 1024 0x4864499: parse_input(GenericField const&) (input.cpp:44)
+          n0: 1024 0x1093FD: main (main.cpp:37)
+ n3: 5088 0x4859A23: String::split(char const*) const (string.cpp:72)
+  n1: 3816 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 3816 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 3816 0x1093FD: main (main.cpp:37)
+  n1: 1272 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 4592 0x485961C: String::allocate_and_copy(char const*, int) (string.cpp:7)
+  n2: 4549 0x4859BAD: String::trim() (string.cpp:103)
+   n1: 3754 0x485CF4C: Port::match(GenericString const&) const (port.cpp:61)
+    n1: 3754 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+     n0: 3754 0x1093FD: main (main.cpp:37)
+   n0: 795 in 5 places, all below massif's threshold (1.00%)
+  n0: 43 in 6 places, all below massif's threshold (1.00%)
+ n3: 2544 0x4859AA5: String::split(char const*) const (string.cpp:83)
+  n1: 1272 0x485CF04: Port::match(GenericString const&) const (port.cpp:55)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n1: 1272 0x485CFAC: Port::match(GenericString const&) const (port.cpp:67)
+   n1: 1272 0x48643B7: parse_input(GenericField const&) (input.cpp:38)
+    n0: 1272 0x1093FD: main (main.cpp:37)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n0: 209 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=7482811
+mem_heap_B=90597
+mem_heap_extra_B=10195
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=7534052
+mem_heap_B=90752
+mem_heap_extra_B=10480
+mem_stacks_B=0
+heap_tree=empty
